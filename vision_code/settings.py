@@ -34,8 +34,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-ALLOWED_HOSTS = ['https://vision-code-backend-d6dcdrg0hhcectee.centralindia-01.azurewebsites.net/', 'https://vision-code-dbchbubpanfcfud0.centralindia-01.azurewebsites.net/', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['.railway.app']
 
 # Application definition
 
