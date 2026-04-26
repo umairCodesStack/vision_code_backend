@@ -34,7 +34,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-ALLOWED_HOSTS = ['.railway.app']
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1','.railway.app']
 
 # Application definition
 
@@ -187,6 +187,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 SIMPLE_JWT = {
+    "TOKEN_OBTAIN_SERIALIZER": "Accounts.token_serializers.CustomTokenObtainPairSerializer",
     # 🔐 ACCESS TOKEN (used in every API request)
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=6),
 
