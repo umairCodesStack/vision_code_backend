@@ -13,7 +13,7 @@ from .serializers.course import (
     CourseListSerializer,
     CourseDetailSerializer
 )
-from .serializers.module import CourseModuleSerializer
+from .serializers.module import CourseModuleSerializer,ModuleSerializer
 from .serializers.content_item import ContentItemSerializer
 
 from Accounts.permissions import IsInstructorOrAdmin
@@ -69,7 +69,7 @@ class CourseModuleViewSet(viewsets.ModelViewSet):
         "content_items__quiz__questions__options",
         "content_items__assignment",
         )
-        serializer_class = CourseModuleSerializer
+        serializer_class = ModuleSerializer
 
         filter_backends = [
             DjangoFilterBackend,
